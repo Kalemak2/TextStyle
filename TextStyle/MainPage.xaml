@@ -8,8 +8,8 @@
             <Label Text="Stylowanie Elementu" BackgroundColor="#558B2F" FontSize="40" Padding="20"/>
             <VerticalStackLayout Margin="40" Padding="20">
                 <Label Text="Rozmiar:" FontSize="20" x:Name="sliderLabel"/>
-                <Slider Minimum="1" Maximum="100" x:Name="slider"/>
-                <Picker Title="Pozycja tekstu" x:Name="textAlignmentPicker">
+                <Slider Minimum="1" Maximum="100" x:Name="slider" ValueChanged="OnSliderValueChanged"/>
+                <Picker Title="Pozycja tekstu" x:Name="textAlignmentPicker" FontSize="20">
                     <Picker.Items>
                         <x:String >End</x:String>
                         <x:String>Center</x:String>
