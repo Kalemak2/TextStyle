@@ -7,21 +7,27 @@
         <StackLayout>
             <Label Text="Stylowanie Elementu" BackgroundColor="#558B2F" FontSize="40" Padding="20"/>
             <VerticalStackLayout Margin="40" Padding="20">
-                <Label Text="Rozmiar:" FontSize="20" />
-                <Slider Minimum="1" Maximum="100" />
-                <Picker Title="Pozycja tekstu" />
+                <Label Text="Rozmiar:" FontSize="20" x:Name="sliderLabel"/>
+                <Slider Minimum="1" Maximum="100" x:Name="slider"/>
+                <Picker Title="Pozycja tekstu" x:Name="textAlignmentPicker">
+                    <Picker.Items>
+                        <x:String >End</x:String>
+                        <x:String>Center</x:String>
+                        <x:String>Start</x:String>
+                    </Picker.Items>
+                </Picker>
 
                 <Label Text="Pogrubiony tekst?" FontSize="20"/>
-                
-                <Switch IsToggled="false" HorizontalOptions="End"/>
+
+                <Switch IsToggled="false" HorizontalOptions="End" x:Name="boldSwitch"/>
                 <Label Text="Pochylony tekst?" FontSize="20"/>
-                
-                <Switch IsToggled="false" HorizontalOptions="End"/>
-                <Button Text="Zatwierdź ustawienia" BackgroundColor="#558B2F" />
+
+                <Switch IsToggled="false" HorizontalOptions="End" x:Name="italicSwitch"/>
+                <Button Text="Zatwierdź ustawienia" BackgroundColor="#558B2F" Clicked="OnClick"/>
                 <VerticalStackLayout Padding="20">
                     <BoxView HeightRequest="1" BackgroundColor="#558B2F" />
                 </VerticalStackLayout>
-                <Label Text="test"></Label>
+                <Label x:Name="xLabel"/>
             </VerticalStackLayout>
 
         </StackLayout>
