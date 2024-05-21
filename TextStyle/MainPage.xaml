@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextStyle.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Stylowanie Elementu" BackgroundColor="#558B2F" FontSize="40" Padding="20"/>
+            <VerticalStackLayout Margin="40" Padding="20">
+                <Label Text="Rozmiar:" FontSize="20" />
+                <Slider Minimum="1" Maximum="100" />
+                <Picker Title="Pozycja tekstu" />
+
+                <Label Text="Pogrubiony tekst?" FontSize="20"/>
+                
+                <Switch IsToggled="false" HorizontalOptions="End"/>
+                <Label Text="Pochylony tekst?" FontSize="20"/>
+                
+                <Switch IsToggled="false" HorizontalOptions="End"/>
+                <Button Text="Zatwierdź ustawienia" BackgroundColor="#558B2F" />
+                <VerticalStackLayout Padding="20">
+                    <BoxView HeightRequest="1" BackgroundColor="#558B2F" />
+                </VerticalStackLayout>
+                <Label Text="test"></Label>
+            </VerticalStackLayout>
+
+        </StackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
