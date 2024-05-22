@@ -9,7 +9,7 @@
             <VerticalStackLayout Margin="40" Padding="20">
                 <Label Text="Rozmiar:" x:Name="sliderLabel" FontSize="18"/>
                 <Slider Minimum="1" Maximum="48" x:Name="slider" ValueChanged="OnSliderValueChanged" Margin="0, 0, 0, 18"/>
-                <Picker Title="Pozycja tekstu" x:Name="textAlignmentPicker" FontSize="18" Margin="0, 0, 0, 18">
+                <Picker Title="Pozycja tekstu" x:Name="xpicker" FontSize="18" Margin="0, 0, 0, 18">
                     <Picker.Items>
                         <x:String >End</x:String>
                         <x:String>Center</x:String>

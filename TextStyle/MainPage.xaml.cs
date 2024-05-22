@@ -21,39 +21,42 @@
 
         private void OnClick(object sender, EventArgs e)
         {
-            double fontSize = slider.Value;
-            string selectedAlignment = textAlignmentPicker.SelectedItem as string;
-            TextAlignment horizontalTextAlignment = TextAlignment.Start;
+            double selectedFontSize = slider.Value;
 
-            if (selectedAlignment == "End")
+
+            string selectedAlignmentOption = xpicker.SelectedItem as string;
+            TextAlignment textAlignment = TextAlignment.Start;
+
+            if (selectedAlignmentOption == "End")
             {
-                horizontalTextAlignment = TextAlignment.End;
+                textAlignment = TextAlignment.End;
             }
-            else if (selectedAlignment == "Center")
+            else if (selectedAlignmentOption == "Center")
             {
-                horizontalTextAlignment = TextAlignment.Center;
+                textAlignment = TextAlignment.Center;
             }
+            
 
 
-            bool isBold = boldSwitch.IsToggled;
-            bool isItalic = italicSwitch.IsToggled;
+            FontAttributes fontStyleAttributes = FontAttributes.None;
 
+            bool isTextBold = boldSwitch.IsToggled;
 
-            FontAttributes fontAttributes = FontAttributes.None;
-
-            if (isBold)
+            if (isTextBold)
             {
-                fontAttributes |= FontAttributes.Bold;
-            }
-            if (isItalic)
-            {
-                fontAttributes |= FontAttributes.Italic;
+                fontStyleAttributes |= FontAttributes.Bold;
             }
 
+            bool isTextItalic = italicSwitch.IsToggled;
 
-            xLabel.FontSize = fontSize;
-            xLabel.HorizontalTextAlignment = horizontalTextAlignment;
-            xLabel.FontAttributes = fontAttributes;
+            if (isTextItalic)
+            {
+                fontStyleAttributes |= FontAttributes.Italic;
+            }
+
+            xLabel.HorizontalTextAlignment = textAlignment;
+            xLabel.FontSize = selectedFontSize;
+            xLabel.FontAttributes = fontStyleAttributes;
         }
     }
 }
